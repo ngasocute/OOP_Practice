@@ -1,9 +1,8 @@
+package hust.soict.globalict.aims.media;
+
 import java.util.Scanner;
-import java.lang.Comparable;
-import hust.soict.globalict.aims.media.*;
 
-
-public class DigitalVideoDisc extends Media implements Playable, Comparable<DigitalVideoDisc> {
+public class DigitalVideoDisc extends Media implements Playable {
     private String director;
     private int length;
     public DigitalVideoDisc() {
@@ -61,13 +60,4 @@ public class DigitalVideoDisc extends Media implements Playable, Comparable<Digi
         System.out.println("Playing DVD: " + this.getTitle());
         System.out.println("DVD length: " + this.getLength());
     }
-    public int compareTo (DigitalVideoDisc dvd) {
-        // compare title
-        if (this.getTitle().compareTo(dvd.getTitle()) > 0) {
-            return 1;
-        } else if (this.getTitle().compareTo(dvd.getTitle()) < 0) {
-            return -1;
-        } else return 0;
-        }
-
 }
